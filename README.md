@@ -19,6 +19,18 @@ DB_USERNAME=root
 DB_PASSWORD=
 </pre>
 
+Also update the following fields to match the mailing method that will be used, it's ready to be used with google smtp (remember to enable less secure apps)
+<pre>
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=587
+MAIL_USERNAME=**emailaddress
+MAIL_PASSWORD=**password
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS=**fromaddress
+MAIL_FROM_NAME="ProPay"
+</pre>
+
 When the database has been created and the fields above are correct please enter these commands within the project folder
 <pre>
 composer update
