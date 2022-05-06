@@ -18,4 +18,8 @@
         <th>SA ID Number</th>
         <td>*********{{substr($person->sa_id, -4, 4)}}</td>
     </tr>
+    <tr>
+        <th>Interests</th>
+        <td>{{$person->implodedInterests()}}</td>
+    </tr>
 </table>

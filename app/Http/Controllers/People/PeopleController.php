@@ -57,6 +57,7 @@ class PeopleController extends Controller
         $personInterestCrud->linkInterests($person->id, $interestParse->getInterestIds());
 
         PersonCapturedEvent::dispatch($person);
+        session()->flash('success', "Person Created Successfully");
         return back();
     }
 
@@ -98,6 +99,7 @@ class PeopleController extends Controller
         $interestParse = new InterestsParse($request->interests);
         $personInterestCrud = new InterestCrud();
         $personInterestCrud->linkInterests($person->id, $interestParse->getInterestIds());
+        session()->flash('success', "Person Updated Successfully");
         return redirect()->route('persons.index');
     }
 
