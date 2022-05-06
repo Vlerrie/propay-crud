@@ -4,7 +4,7 @@
 
 ### Requirements
 - Laravel 9
-- PHP 8.1
+- PHP >= 8.1
 - MySql
 
 ### Setup
@@ -13,14 +13,18 @@ First rename the ".env.example" file to ".env" and update following fields to ma
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE= #name of Schema
+DB_DATABASE=**dbName
 DB_USERNAME=root
 DB_PASSWORD=
 </pre>
 
 When the database has been created and the fields above are correct please enter these commands within the project folder
 <pre>
+php artisan key:generate
 composer update
 php artisan migrate
 php artisan db:seed
+npm install
+npm run dev
+php artisan queue:work
 </pre>
