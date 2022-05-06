@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Interest extends Model
 {
-    use HasFactory;
+    protected $guarded = ['id'];
 }

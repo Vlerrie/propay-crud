@@ -15,12 +15,13 @@ return new class extends Migration
     {
         Schema::create('people', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id');
             $table->string('name', 128);
             $table->string('surname', 128);
             $table->string('sa_id', 13);
             $table->string('mobile', 13);
-            $table->string('email', 13);
-            $table->string('dob', 13);
+            $table->string('email', 128);
+            $table->date('dob');
             $table->foreignId('language_id');
             $table->timestamps();
         });
