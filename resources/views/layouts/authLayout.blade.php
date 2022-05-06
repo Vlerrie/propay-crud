@@ -17,6 +17,7 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 <body class="container-fluid bg-light">
+@include('navbar')
 @include('flashMessages')
 @yield('content')
 </body>

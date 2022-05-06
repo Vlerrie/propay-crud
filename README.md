@@ -3,9 +3,10 @@
 ## PROPAY Basic Crud Test
 
 ### Requirements
-- Laravel 9
+- Laravel >= 9
 - PHP >= 8.1
 - MySql
+- npm
 
 ### Setup
 First rename the ".env.example" file to ".env" and update following fields to match a database schema that was created
@@ -20,11 +21,15 @@ DB_PASSWORD=
 
 When the database has been created and the fields above are correct please enter these commands within the project folder
 <pre>
-php artisan key:generate
 composer update
+php artisan key:generate
 php artisan migrate
 php artisan db:seed
 npm install
 npm run dev
 php artisan queue:work
 </pre>
+
+If using Apache point the root directory to the project/public folder or just use the 'php artisan serve' command.
+
+When everything is up and running please register a user to start managing people.
